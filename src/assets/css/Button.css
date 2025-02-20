@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "GiucondaSb";
+    src: url("/src/assets/fonts/GiucondaSb.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+.button1 {
+    background-color: #36366c;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font: "gilroy";
+    font-weight: normal;
+    width: 15em;
+    border-radius: 1rem;
+    color: white;
+    /* box-shadow: 0 0.4rem #dfd9d9; */
+    cursor: pointer;
+   }
+   
+   .button1:active {
+    color: white;
+    /* box-shadow: 0 0.2rem #dfd9d9; */
+    transform: translateY(0.2rem);
+   }
+   
+   .button1:hover:not(:disabled) {
+    /* background: #BA68C8; */
+    color: white;
+    /* text-shadow: 0 0.1rem #bcb4b4; */
+   }
+   
+   .button1:disabled {
+    cursor: auto;
+    color: grey;
+   }

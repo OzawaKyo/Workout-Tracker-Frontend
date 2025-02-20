@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroythin";
+    src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+.login{
+    background-color: #F2EFF0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.login-t1{
+    font-size: 1.7rem;
+    color: #1a1a4b;
+    text-align: center;
+    font-family: "gilroy";
+    font-weight: bold;
+    max-width: 290px;
+}
+.login-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.login-t2{
+    font-size: 1.4rem;
+    color: #1a1a4b;
+    text-align: center;
+    font-family:"gilroythin";
+    font-weight: bold;
+    max-width: 250px;
+    margin: 0;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    gap: 1em;
+}
+.login-input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "gilroy";
+    font-size: 1rem;
+    margin: 0;
+}
+.login-t3{
+    font-size: 1rem;
+    color: #1a1a4b;
+    text-align: center;
+    font-family: "gilroy";
+    font-weight: bold;
+    max-width: 290px;
+}
+.login-register{
+    font-size: 1rem;
+    color: #F06969;
+    text-align: center;
+    font-family: "gilroy";
+    font-weight: bold;
+    max-width: 290px;
+    cursor: pointer;
+}
+.login-error{
+    font-size: 0.8rem;
+    color: #F06969;
+    text-align: center;
+    font-family: "gilroy";
+    font-weight: bold;
+    max-width: 290px;
+}

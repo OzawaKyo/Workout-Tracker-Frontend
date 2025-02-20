@@ -1,0 +1,26 @@
+body{
+    background-color: #F5F5F7;
+}
+
+/* Conteneur de l'iPhone */
+.iphone-container {
+    width: 375px; /* Largeur fixe d'un iPhone */
+    height: min(95vh, 850px); /* Hauteur max 850px, sinon 95% de l'écran */
+    min-height: min(550px, 100vh); /* Minimum 450px, sauf si l'écran est plus petit */
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Ajustements pour les petits écrans (moins de 500px de hauteur) */
+  @media (max-height: 500px) {
+    .iphone-container {
+      border-radius: 20px; /* Moins de courbure */
+      padding: 5px; /* Moins d’espace intérieur */
+    }
+  }
+  
