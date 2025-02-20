@@ -47,11 +47,13 @@
 
 .home-workouts-container {
     width: 100%;
-    height: 350px; /* Ajuste en fonction de la hauteur de tes workouts */
-    overflow-y: auto;
+    overflow-x: auto;
+    display: flex;
     scrollbar-width: none; /* Cache la scrollbar sur Firefox */
     -ms-overflow-style: none; /* Cache la scrollbar sur Edge */
-    scroll-snap-type: y mandatory; /* Snap scrolling vertical */
+    scroll-snap-type: x mandatory; /* Scroll horizontal par section */
+    margin-left: 1em;
+    margin-top: 2em;
 }
 
 .home-workouts-container::-webkit-scrollbar {
@@ -60,14 +62,13 @@
 
 .home-workouts {
     display: flex;
-    flex-direction: column;
     gap: 1em;
-    align-items: center;
+    flex-wrap: nowrap;
 }
 
-.workout-container {
-    width: 90%; /* Ajuste la largeur */
-    flex-shrink: 0;
-    height: 160px; /* Hauteur du workout */
-    scroll-snap-align: start; /* S'arrête à chaque élément */
+.workout-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    scroll-snap-align: start;
 }

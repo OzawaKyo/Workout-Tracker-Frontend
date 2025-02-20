@@ -22,6 +22,19 @@ const Home = () => {
         fetchProfile();
     }, []);
 
+    // Liste des workouts (exemple)
+    const workouts = [
+        { title: "Push-up", type: "Strength", desc: "curl" },
+        { title: "Squat", type: "Legs", desc: "squat" },
+        { title: "Burpees", type: "Cardio", desc: "biceps" }
+    ];
+
+    // Diviser en groupes de 2 workouts
+    const groupedWorkouts = [];
+    for (let i = 0; i < workouts.length; i += 2) {
+        groupedWorkouts.push(workouts.slice(i, i + 2));
+    }
+
     return (
         <div className='home'>
             <div className='home-top'>
@@ -33,15 +46,16 @@ const Home = () => {
 
             <Filters options={["All", "Strength", "Flexibility", "Cardio"]} onSelect={(filter) => console.log(filter)} />
 
-            {/* Conteneur scrollable */}
+            {/* Conteneur scrollable horizontalement */}
             <div className='home-workouts-container'>
                 <div className='home-workouts'>
-                    <Workout title="Push-up" type="Strength" desc="curl" />
-                    <Workout title="Squat" type="Legs" desc="squat" />
-                    <Workout title="Plank" type="Core" desc="plank" />
-                    <Workout title="Jump Rope" type="Cardio" desc="jumprope" />
-                    <Workout title="Deadlift" type="Strength" desc="deadlift" />
-                    <Workout title="Burpees" type="Cardio" desc="burpees" />
+                    {groupedWorkouts.map((group, index) => (
+                        <div className='workout-group' key={index}>
+                            {group.map((workout, idx) => (
+                                <Workout key={idx} title={workout.title} type={workout.type} desc={workout.desc} />
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
