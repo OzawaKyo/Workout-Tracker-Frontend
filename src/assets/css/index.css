@@ -5,9 +5,9 @@ body{
 /* Conteneur de l'iPhone */
 .iphone-container {
     width: 375px; /* Largeur fixe d'un iPhone */
-    height: min(95vh, 850px); /* Hauteur max 850px, sinon 95% de l'écran */
+    height: min(95vh, 850px);
     min-height: min(550px, 100vh); /* Minimum 450px, sauf si l'écran est plus petit */
-    background: white;
+    /* background: white; */
     border-radius: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     display: flex;

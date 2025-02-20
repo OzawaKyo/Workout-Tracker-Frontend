@@ -16,22 +16,38 @@
     flex-direction: column;
     background-color: #F2EFF0;
     height: 100vh;
+    padding-left:0.5em ;
+    padding-right:0.5em ;
 }
 .home-top{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     padding-top: 2em;
+
 }
 .home-t{
     font-family: "gilroy";
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin: 0;
+    max-width: 220px;
+    color: #36366c;
 }
 .home-profile-img{
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin: 0;
+}
+
+.home-workouts{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1rem;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: 1em;
 }

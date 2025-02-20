@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroythin";
+    src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+.workout-container{
+    background-color: aquamarine;
+    width: 320px;
+    height: 160px;
+    align-self: center;
+    border-radius: 25px;
+    /* background-image: url("../images/curl.gif"); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.workout-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    height: 100%;
+    padding: 2em;
+}
+.workout-title{
+    font-family: "gilroy";
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.5em;
+    color: white;
+    margin:0;
+    padding: 0;
+}
+
+.workout-type{
+    font-family: "gilroythin";
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5em;
+    color: white;
+    margin:0;
+    padding: 0;
+}
