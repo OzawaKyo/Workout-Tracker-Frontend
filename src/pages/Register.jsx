@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { register } from "../services/authService";
 import useAuth from "../hooks/useAuth";
+import "../assets/css/Login.css";
 
 const Register = () => {
   const isAuthenticated = useAuth();
@@ -37,15 +38,15 @@ const Register = () => {
   };
 
   return (
-    <div className="register">
-      <div className="register-header">
-        <h1 className="register-t1">Join Us!</h1>
-        <h2 className="register-t2">Create an account and start tracking!</h2>
+    <div className="login">
+      <div className="login-header">
+        <h1 className="login-t1">Join Us!</h1>
+        <h2 className="login-t2">Create an account and start tracking!</h2>
       </div>
 
-      <div className="register-form">
+      <div className="login-form">
         <input
-          className="register-input"
+          className="login-input"
           type="text"
           name="name"
           placeholder="Enter name"
@@ -53,7 +54,7 @@ const Register = () => {
           onChange={handleChange}
         />
         <input
-          className="register-input"
+          className="login-input"
           type="email"
           name="email"
           placeholder="Enter email"
@@ -61,7 +62,7 @@ const Register = () => {
           onChange={handleChange}
         />
         <input
-          className="register-input"
+          className="login-input"
           type="password"
           name="password"
           placeholder="Password"
@@ -70,12 +71,12 @@ const Register = () => {
         />
       </div>
 
-      {error && <p className="register-error">{error}</p>}
+      {error && <p className="login-error">{error}</p>}
 
       <Button text="Sign Up" onClick={handleRegister} />
 
-      <h3 className="register-t3">
-        Already have an account? <a className="register-login" href="/login">Login here</a>
+      <h3 className="login-t3">
+        Already have an account? <a className="login-register" href="/login">Login here</a>
       </h3>
     </div>
   );

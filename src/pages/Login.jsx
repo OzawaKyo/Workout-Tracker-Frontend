@@ -30,7 +30,7 @@ const Login = () => {
     setError(null);
     try {
       await login(credentials.email, credentials.password);
-      navigate("/"); // Redirige après connexion réussie
+      navigate("/home"); // Redirige après connexion réussie
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     }

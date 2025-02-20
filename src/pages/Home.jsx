@@ -5,22 +5,30 @@ import { useEffect, useState } from 'react'
 import Filters from '../components/Filters'
 import Workout from '../components/Workout'
 import Button from '../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchProfile = async () => {
             try {
                 const userData = await getUserProfile();
-                setUser(userData);
+                if (!userData) {
+                    console.error("Utilisateur non connecté");
+                    navigate("/login");  // Redirige si l'utilisateur n'est pas connecté
+                } else {
+                    setUser(userData);
+                }
             } catch (error) {
                 console.error("Erreur lors de la récupération du profil :", error);
+                navigate("/login");  // Redirige en cas d'erreur
             }
         };
 
         fetchProfile();
-    }, []);
+    }, [navigate]);
 
     // Liste des workouts (exemple)
     const workouts = [
@@ -40,7 +48,8 @@ const Home = () => {
             <div className='home-top'>
                 <h1 className='home-t'>Tracking your fitness now</h1>
                 {user && user.avatar && (
-                    <img className='home-profile-img' src={user.avatar} alt="User Avatar" />
+                    // l'image dans /public/pingu/"user.avatar".png 
+                    <img src={`/pingu/${user.avatar}.png`} alt='avatar' className='home-profile-img' />
                 )}
             </div>
 
