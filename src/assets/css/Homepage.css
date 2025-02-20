@@ -4,6 +4,18 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroythin";
+    src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 .homepage{
     background-color: #e2cbee;
@@ -23,7 +35,7 @@
     font-size: 2.5rem;
     color: #36366c;
     text-align: center;
-    font-family: "GiucondaSb";
+    font-family: "gilroy";
     font-weight: lighter;
     max-width: 290px;
 }

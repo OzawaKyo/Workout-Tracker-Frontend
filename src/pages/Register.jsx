@@ -29,13 +29,21 @@ const Register = () => {
 
   const handleRegister = async () => {
     setError(null);
-    try {
-      await register(userData);
-      navigate("/login"); // Redirige après inscription réussie
-    } catch (err) {
-      setError(err.response?.data?.message || "Registration failed");
+
+    // Vérifier si tous les champs sont remplis
+    if (!userData.name || !userData.email || !userData.password) {
+        setError("All fields are required");
+        return;
     }
-  };
+
+    try {
+        await register(userData);
+        navigate("/login"); // Redirige après inscription réussie
+    } catch (err) {
+        setError(err.response?.data?.message || "Registration failed");
+    }
+};
+
 
   return (
     <div className="login">
@@ -50,6 +58,9 @@ const Register = () => {
           type="text"
           name="name"
           placeholder="Enter name"
+
+          required
+
           value={userData.name}
           onChange={handleChange}
         />
@@ -60,12 +71,16 @@ const Register = () => {
           placeholder="Enter email"
           value={userData.email}
           onChange={handleChange}
+          required
+
         />
         <input
           className="login-input"
           type="password"
           name="password"
           placeholder="Password"
+          required
+
           value={userData.password}
           onChange={handleChange}
         />
