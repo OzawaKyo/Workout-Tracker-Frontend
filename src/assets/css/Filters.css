@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroythin";
+    src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.filters-wrapper {
+    max-width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filters-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .filters-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .filter-button {
+    padding: 12px 16px;
+    border-radius: 20px;
+    border: 1px solid #98989c;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+    font: "gilroy";
+    font-weight: bold;
+  }
+  
+  .filter-button.selected {
+    background-color: #36366c;
+    color: white;
+  }
+  

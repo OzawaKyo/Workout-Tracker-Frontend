@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroythin";
+    src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2EFF0;
+    height: 100vh;
+}
+.home-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-top: 2em;
+}
+.home-t{
+    font-family: "gilroy";
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+.home-profile-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0;
+}
