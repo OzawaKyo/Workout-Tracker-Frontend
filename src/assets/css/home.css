@@ -41,13 +41,33 @@
     margin: 0;
 }
 
-.home-workouts{
+
+
+
+
+.home-workouts-container {
+    width: 100%;
+    height: 350px; /* Ajuste en fonction de la hauteur de tes workouts */
+    overflow-y: auto;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+    -ms-overflow-style: none; /* Cache la scrollbar sur Edge */
+    scroll-snap-type: y mandatory; /* Snap scrolling vertical */
+}
+
+.home-workouts-container::-webkit-scrollbar {
+    display: none; /* Cache la scrollbar sur Chrome/Safari */
+}
+
+.home-workouts {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 1rem;
-    overflow: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    margin-top: 1em;
+    align-items: center;
+}
+
+.workout-container {
+    width: 90%; /* Ajuste la largeur */
+    flex-shrink: 0;
+    height: 160px; /* Hauteur du workout */
+    scroll-snap-align: start; /* S'arrête à chaque élément */
 }

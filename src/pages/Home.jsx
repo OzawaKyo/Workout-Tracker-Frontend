@@ -7,7 +7,6 @@ import Workout from '../components/Workout'
 import Button from '../components/Button'
 
 const Home = () => {
-
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -25,17 +24,28 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <div className='home-top' >
-                <h1 className='home-t'>Tracking your fitness now </h1>
-                {user && user.avatar && <img className='home-profile-img' src={user.avatar} alt="User Avatar" />}
+            <div className='home-top'>
+                <h1 className='home-t'>Tracking your fitness now</h1>
+                {user && user.avatar && (
+                    <img className='home-profile-img' src={user.avatar} alt="User Avatar" />
+                )}
             </div>
-            <Filters options={["All", "Strength", "Flexibility", "scrollability", "scrollable"]} onSelect={(filter) => console.log(filter)} />
-            <div className='home-workouts' >
-                <Workout title="Push-up" type="Strength" desc="curl" />
-                <Workout title="Squat" type="Legs" desc="squat" />
+
+            <Filters options={["All", "Strength", "Flexibility", "Cardio"]} onSelect={(filter) => console.log(filter)} />
+
+            {/* Conteneur scrollable */}
+            <div className='home-workouts-container'>
+                <div className='home-workouts'>
+                    <Workout title="Push-up" type="Strength" desc="curl" />
+                    <Workout title="Squat" type="Legs" desc="squat" />
+                    <Workout title="Plank" type="Core" desc="plank" />
+                    <Workout title="Jump Rope" type="Cardio" desc="jumprope" />
+                    <Workout title="Deadlift" type="Strength" desc="deadlift" />
+                    <Workout title="Burpees" type="Cardio" desc="burpees" />
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
