@@ -1,7 +1,7 @@
 import api from "./api";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const getUserProfile = async () => {
     try {
@@ -16,7 +16,9 @@ export const getUserProfile = async () => {
                 Authorization: `Bearer ${token}`
             }
         });
+        console.log("API URL utilisée:", `${API_URL}/users/me`);
 
+        // console.log("User data:", response.data);
         return response.data;
     } catch (error) {
         console.error("Token invalide ou expiré :", error);
