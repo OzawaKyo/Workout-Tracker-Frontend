@@ -74,8 +74,8 @@
 
 @media (max-width: 450px) {
     .home{
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-bottom: 5em;
-        margin-top: 5em;
+        /* margin-top: 3em; */
     }
 }

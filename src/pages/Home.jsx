@@ -15,7 +15,7 @@ const Home = () => {
                 const userData = await getUserProfile();
                 if (!userData) {
                     console.error("Utilisateur non connecté");
-                    navigate("/login");  
+                    navigate("/login");
                 } else {
                     setUser(userData);
                 }
@@ -50,7 +50,8 @@ const Home = () => {
                     <img src={`/pingu/${user.avatar}.png`} alt="avatar" className="home-profile-img" />
                 )}
             </div>
-
+            {/*afficher la resolution de l'ecran  */}
+                <p>Resolution: {window.screen.width} x {window.screen.height}</p>
             <Filters options={["All", "Strength", "Flexibility", "Cardio"]} onSelect={(filter) => console.log(filter)} />
 
             <div className="home-workouts-container">
@@ -58,12 +59,12 @@ const Home = () => {
                     {groupedWorkouts.map((group, index) => (
                         <div className="workout-group" key={index}>
                             {group.map((workout, idx) => (
-                                <Workout 
-                                    key={idx} 
-                                    title={workout.title} 
-                                    type={workout.type} 
-                                    desc={workout.desc} 
-                                    isAdd={workout.isAdd} 
+                                <Workout
+                                    key={idx}
+                                    title={workout.title}
+                                    type={workout.type}
+                                    desc={workout.desc}
+                                    isAdd={workout.isAdd}
                                 />
                             ))}
                         </div>
