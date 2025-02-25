@@ -4,12 +4,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "gilroy";
     src: url("/src/assets/fonts/gilroy.ttf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "gilroythin";
     src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
@@ -17,21 +19,25 @@
     font-style: normal;
 }
 
-.homepage{
+.homepage {
     background-color: #e2cbee;
     height: 100vh;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 2em;
     padding-bottom: 2em;
 }
-.homepage-runner{
+
+.homepage-runner {
     width: 350px;
     height: 330px;
 }
-.homepage-title{
+
+.homepage-title {
     font-size: 2.5rem;
     color: #36366c;
     text-align: center;
@@ -39,3 +45,4 @@
     font-weight: lighter;
     max-width: 290px;
 }
+

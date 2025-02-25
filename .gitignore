@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase cache & emulators
+.firebase/
+.firebaserc
+
+# Build folder (generated on deploy)
+dist/
+build/
+
+# Firebase Hosting cache
+public/

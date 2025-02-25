@@ -1,26 +1,42 @@
-body{
-    background-color: #F5F5F7;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F7;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
 /* Conteneur de l'iPhone */
 .iphone-container {
-    width: 375px; /* Largeur fixe d'un iPhone */
+  width: min(100vw, 450px);
+  /* 100% de la largeur sur mobile, sinon 375px max */
+  height: min(100vh, 850px);
+  /* 100% de la hauteur sur mobile, sinon 850px max */
+  min-height: 100vh;
+  /* Toujours au moins 100% de l'écran */
+  border-radius: 0;
+  /* Pas de coins arrondis sur mobile */
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+  overflow: hidden;
+}
+
+/* Ajoute une apparence d'iPhone uniquement sur les grands écrans */
+@media (min-width: 450px) {
+  .iphone-container {
+    width: 375px;
     height: min(95vh, 850px);
-    min-height: min(550px, 100vh); /* Minimum 450px, sauf si l'écran est plus petit */
-    /* background: white; */
     border-radius: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    overflow: hidden;
   }
-  
-  /* Ajustements pour les petits écrans (moins de 500px de hauteur) */
-  @media (max-height: 500px) {
-    .iphone-container {
-      border-radius: 20px; /* Moins de courbure */
-      padding: 5px; /* Moins d’espace intérieur */
-    }
-  }
-  
+}
