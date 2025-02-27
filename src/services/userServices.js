@@ -16,7 +16,7 @@ export const getUserProfile = async () => {
                 Authorization: `Bearer ${token}`
             }
         });
-        console.log("API URL utilisée:", `${API_URL}/users/me`);
+        // console.log("API URL utilisée:", `${API_URL}/users/me`);
 
         // console.log("User data:", response.data);
         return response.data;

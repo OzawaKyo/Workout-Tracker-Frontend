@@ -4,15 +4,17 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "gilroythin";
     src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
-.workout-container{
+
+.workout-container {
     background-color: aquamarine;
-    width: 320px;
+    width: 300px;
     height: 160px;
     align-self: center;
     border-radius: 25px;
@@ -20,8 +22,11 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
+    margin-left: 1em;
+
 }
-.workout-content{
+
+.workout-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -29,7 +34,8 @@
     height: 100%;
     padding: 2em;
 }
-.workout-content2{
+
+.workout-content2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,26 +43,28 @@
     height: 100%;
     padding: 2em;
 }
-.workout-title{
+
+.workout-title {
     font-family: "gilroy";
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
     padding: 0.5em;
     color: white;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
-.workout-type{
+.workout-type {
     font-family: "gilroythin";
     font-size: 1rem;
     margin: 0;
     padding: 0.5em;
     color: white;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
+
 .add-workout {
     border: 3px dashed #36366c;
     background: none;
@@ -77,7 +85,16 @@
 
 }
 
-.workout-add-icon{
+.workout-add-icon {
     width: 40px;
     height: 40px;
+}
+
+@media (max-width: 450px) {
+    .workout-container {
+        margin-left: 1em;
+        width: 320px;
+
+    }
+
 }

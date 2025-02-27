@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "gilroythin";
     src: url("/src/assets/fonts/Gilroy-Thin.ttf") format("opentype");
@@ -11,23 +12,26 @@
     font-style: normal;
 }
 
-.home{
+.home {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
     background-color: #F2EFF0;
     height: 100vh;
-    padding-left:0.5em ;
-    padding-right:0.5em ;
 }
-.home-top{
+
+.home-top {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     padding-top: 2em;
 
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
 }
-.home-t{
+
+.home-t {
     font-family: "gilroy";
     font-size: 2.5rem;
     font-weight: 600;
@@ -35,7 +39,8 @@
     max-width: 220px;
     color: #36366c;
 }
-.home-profile-img{
+
+.home-profile-img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -46,15 +51,18 @@
     width: 100%;
     overflow-x: auto;
     display: flex;
-    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
-    -ms-overflow-style: none; /* Cache la scrollbar sur Edge */
-    scroll-snap-type: x mandatory; /* Scroll horizontal par section */
-    margin-left: 1em;
+    scrollbar-width: none;
+    /* Cache la scrollbar sur Firefox */
+    -ms-overflow-style: none;
+    /* Cache la scrollbar sur Edge */
+    scroll-snap-type: x mandatory;
+    /* Scroll horizontal par section */
     margin-top: 2em;
 }
 
 .home-workouts-container::-webkit-scrollbar {
-    display: none; /* Cache la scrollbar sur Chrome/Safari */
+    display: none;
+    /* Cache la scrollbar sur Chrome/Safari */
 }
 
 .home-workouts {
@@ -73,9 +81,14 @@
 
 
 @media (max-width: 450px) {
-    .home{
+    .home {
         justify-content: space-evenly;
-        margin-bottom: 5em;
+        margin-bottom: 7em;
         /* margin-top: 3em; */
+    }
+
+    .home-t {
+        font-size: 2.5rem;
+        max-width: 250px;
     }
 }

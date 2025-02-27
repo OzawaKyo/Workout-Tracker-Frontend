@@ -50,9 +50,7 @@ const Home = () => {
                     <img src={`/pingu/${user.avatar}.png`} alt="avatar" className="home-profile-img" />
                 )}
             </div>
-            {/*afficher la resolution de l'ecran  */}
-                <p>Resolution: {window.screen.width} x {window.screen.height}</p>
-            <Filters options={["All", "Strength", "Flexibility", "Cardio"]} onSelect={(filter) => console.log(filter)} />
+            <Filters options={["All", "Strength", "Flexibility", "Cardio","Legs","Running","Football","Volleyball"]} onSelect={(filter) => console.log(filter)} />
 
             <div className="home-workouts-container">
                 <div className="home-workouts">
